@@ -1,1 +1,3 @@
 teste de envio pela rasp.
+
+Escrita realizada no VS code do meu computador.
