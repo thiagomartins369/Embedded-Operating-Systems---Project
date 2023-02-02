@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1670094765 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\detectchars.cpp
+	"DetectChars.h"
+
+1670093850 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\detectchars.h
+	<opencv2/opencv.hpp>
+	"Main.h"
+	"PossibleChar.h"
+	"PossiblePlate.h"
+	"Preprocess.h"
+
+1670093752 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main.h
+	<opencv2/opencv.hpp>
+	"DetectPlates.h"
+	"PossiblePlate.h"
+	"DetectChars.h"
+	<iostream>
+
+1670093868 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\detectplates.h
+	<opencv2/opencv.hpp>
+	"Main.h"
+	"PossiblePlate.h"
+	"PossibleChar.h"
+	"Preprocess.h"
+	"DetectChars.h"
+
+1670093895 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\possibleplate.h
+	<string>
+	<opencv2/opencv.hpp>
+
+1670093883 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\possiblechar.h
+	<opencv2/opencv.hpp>
+
+1670093906 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\preprocess.h
+	<opencv2/opencv.hpp>
+
+1674324188 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\detectplates.cpp
+	"DetectPlates.h"
+
+1674324903 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main.cpp
+	"Main.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	<iostream>
+	<cstring>
+
+1670093639 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\possiblechar.cpp
+	"PossibleChar.h"
+
+1488721514 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\possibleplate.cpp
+	"PossiblePlate.h"
+
+1670095109 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\preprocess.cpp
+	"Preprocess.h"
+
+1675193116 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main_ident_placa.cpp
+	"Main.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	<iostream>
+	<cstring>
+	"identificar_placa.h"
+
+1674777298 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\identificar_placa.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<fstream>
+	<iostream>
+	<cstring>
+
+1674777400 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\identificar_placa.cpp
+	"identificar_placa.h"
+
+1674495385 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main_cadastro.cpp
+
+1674495405 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main_controleremoto.cpp
+

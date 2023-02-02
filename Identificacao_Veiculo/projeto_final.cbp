@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="projeto_final" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/projeto_final" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/projeto_final" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="DetectChars.cpp" />
+		<Unit filename="DetectChars.h" />
+		<Unit filename="DetectPlates.cpp" />
+		<Unit filename="DetectPlates.h" />
+		<Unit filename="Main.h" />
+		<Unit filename="Main_ident_placa.cpp" />
+		<Unit filename="PossibleChar.cpp" />
+		<Unit filename="PossibleChar.h" />
+		<Unit filename="PossiblePlate.cpp" />
+		<Unit filename="PossiblePlate.h" />
+		<Unit filename="Preprocess.cpp" />
+		<Unit filename="Preprocess.h" />
+		<Unit filename="classifications.xml" />
+		<Unit filename="identificar_placa.cpp" />
+		<Unit filename="identificar_placa.h" />
+		<Unit filename="images.xml" />
+		<Unit filename="imgOriginalScene.png" />
+		<Unit filename="placas.txt" />
+		<Unit filename="placas_cadastradas.txt" />
+		<Unit filename="placas_ident.depend" />
+		<Unit filename="placas_ident.layout" />
+		<Unit filename="relatorio.txt" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
