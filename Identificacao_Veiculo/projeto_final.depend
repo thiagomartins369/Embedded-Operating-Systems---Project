@@ -9,7 +9,7 @@
 	"PossiblePlate.h"
 	"Preprocess.h"
 
-1670093752 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main.h
+1675379275 c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main.h
 	<opencv2/opencv.hpp>
 	"DetectPlates.h"
 	"PossiblePlate.h"
@@ -55,7 +55,7 @@
 1670095109 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\preprocess.cpp
 	"Preprocess.h"
 
-1675193116 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main_ident_placa.cpp
+1675379019 source:c:\users\andre\p_linux\projeto_soe_final_2023\projeto\projeto_final\main_ident_placa.cpp
 	"Main.h"
 	<stdio.h>
 	<stdlib.h>
