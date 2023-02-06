@@ -3,13 +3,17 @@
 
 int main()
 {
-	int pin=4;
-	if(setGPIOdirection(pin, "out")<0)
-		return -1;
-	if(GPIOwrite(pin, 1)<0)
-		return -2;
-	sleep(5);
-	if(unsetGPIO(pin)<0)
-		return -3;
+	// int pin[4]={14,15,18,23};
+	int pin = 14;			
+			
+		if(setGPIOdirection(pin, "out")<0)
+			return -1;
+		if(GPIOwrite(pin, 1)<0)
+			return -2;
+		sleep(5);
+		if(unsetGPIO(pin)<0)
+			return -3;
+
+	
 	return 0;
 }

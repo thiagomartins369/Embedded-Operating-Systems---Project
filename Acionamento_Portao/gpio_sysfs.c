@@ -70,7 +70,7 @@ int GPIOread(int pin)
 
 int unsetGPIO(int pin)
 {
-	char str[100], val[2];
+	char str[100];
 	sprintf(str, GPIO_PATH "/gpio%d/value", pin);
 	if(write_to_file(str, "0")<0)
 		return -1;

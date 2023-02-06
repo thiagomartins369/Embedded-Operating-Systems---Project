@@ -7,14 +7,10 @@
 #include <sys/mman.h>
 #include <unistd.h>
 
+extern volatile unsigned *gpio;
+
 #define PAGE_SIZE (4*1024)
 #define BLOCK_SIZE (4*1024)
-
-int  mem_fd;
-void *gpio_map;
-
-// I/O access
-volatile unsigned *gpio;
 
 // GPIO setup macros. Always use INP_GPIO(x) before using OUT_GPIO(x) or SET_GPIO_ALT(x,y)
 #define INP_GPIO(g) *(gpio+((g)/10)) &= ~(7<<(((g)%10)*3))

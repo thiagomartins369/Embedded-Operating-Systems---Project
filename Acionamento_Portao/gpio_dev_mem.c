@@ -1,14 +1,14 @@
 #include "gpio_dev_mem.h"
 
-extern int  mem_fd;
-extern void *gpio_map;
-
-// I/O access
-extern volatile unsigned *gpio;
-
 //
 // Set up a memory regions to access GPIO
 //
+
+int  mem_fd;
+void *gpio_map;
+// I/O access
+
+
 void setup_io()
 {
 	/* open /dev/mem */
@@ -30,10 +30,8 @@ void setup_io()
 	close(mem_fd); //No need to keep mem_fd open after mmap
 	if(gpio_map == MAP_FAILED)
 	{
-		printf("mmap error %d\n", (int)gpio_map);//errno also set!
+		printf("mmap error %p\n", gpio_map);//error also set!
 		exit(-1);
 	}
-
-	// Always use volatile pointer!
 	gpio = (volatile unsigned *)gpio_map;
 }
