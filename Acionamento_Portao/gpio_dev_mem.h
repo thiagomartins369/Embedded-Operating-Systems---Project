@@ -1,5 +1,5 @@
-#define BCM2708_PERI_BASE        0x20000000
-#define GPIO_BASE                (BCM2708_PERI_BASE + 0x200000) /* GPIO controller */
+#define BCM2708_PERI_BASE        0xFE000000//0x20000000 (RPi3)
+#define GPIO_BASE BCM2708_PERI_BASE  /* GPIO controller */
 
 #include <stdio.h>
 #include <stdlib.h>
