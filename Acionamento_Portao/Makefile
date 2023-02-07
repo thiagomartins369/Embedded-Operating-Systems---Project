@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -O
 
-all: Ex2.out control_activation.out 
+all: Ex2.out control_activation.out Ex7.out
 
 gpio_dev_mem.o: gpio_dev_mem.c gpio_dev_mem.h
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -12,11 +12,12 @@ Ex2.o: Ex2.c
 control_activation.o: control_activation.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
+Ex7.out: Ex7.c
+	gcc Ex7.c -o Ex7.out -lwiringPi
 Ex2.out: Ex2.o gpio_sysfs.o
 	$(CC) $(CFLAGS) -o Ex2.out Ex2.o gpio_sysfs.o
 control_activation.out: control_activation.o gpio_dev_mem.o
 	$(CC) $(CFLAGS) -o control_activation.out control_activation.o gpio_dev_mem.o
-
 
 clean:
 	rm -f *.out *.o *.bin *.txt *.html
