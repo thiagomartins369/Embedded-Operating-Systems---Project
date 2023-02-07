@@ -4,7 +4,7 @@
 
 int main()
 {
-	int pin[6] = {15,16,1,4,28,29}; // Pino GPIO4 é o 7 na WiringPi
+	int pin[6] = {15,16,1,4,28,29}; // Pino 15 (verde), 16 (azul), 1 (vermelho), 4 (Controle), 28 (Botão_Paring), 29 (Botão_Reg) na WiringPi
     int i=0;
 
 	wiringPiSetup();
