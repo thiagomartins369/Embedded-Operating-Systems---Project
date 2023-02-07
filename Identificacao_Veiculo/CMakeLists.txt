@@ -6,7 +6,7 @@ find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 SET (SRC
- Main.cpp
+ Main_ident_placa.cpp
  identificar_placa.cpp
  DetectPlates.cpp
  Preprocess.cpp
@@ -18,6 +18,3 @@ SET (SRC
 add_executable( Main ${SRC} )
 target_link_libraries( Main ${OpenCV_LIBS})
 
-SET(classifications.xml
-    images.xml
-)

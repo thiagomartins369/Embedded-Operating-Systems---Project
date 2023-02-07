@@ -4,11 +4,11 @@
 #define MY_MAIN
 
 
-#include<opencv2/opencv.hpp> //tirar
+//#include<opencv2/opencv.hpp> //tirar
 
-//#include<opencv2/core/core.hpp>
-//#include<opencv2/highgui/highgui.hpp>
-//#include<opencv2/imgproc/imgproc.hpp>
+#include<opencv2/core/core.hpp>
+#include<opencv2/highgui/highgui.hpp>
+#include<opencv2/imgproc/imgproc.hpp>
 
 #include "DetectPlates.h"
 #include "PossiblePlate.h"
