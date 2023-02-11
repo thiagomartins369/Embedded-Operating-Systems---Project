@@ -1,53 +1,50 @@
-#include <wiringPi.h>
-#include <unistd.h>
-#include <stdio.h>
+#include "Driver_GPIO.h"
+
+int SimulationPlateRecognized(){
+    int plate = 12345;
+    return plate;
+}
+
+void* VehicleRecognitionLED(void){
+    digitalWrite(pin[2], LOW);
+    digitalWrite(pin[1], HIGH);
+    sleep(3);
+    digitalWrite(pin[1], LOW);
+    return NULL;
+}
+
+void* LEDThread(void* dummy_ptr){
+    VehicleRecognitionLED();
+    return NULL;
+}
+
+void* GateThread(void* dummy_ptr){
+    printf("thread gate chamada\n");
+    GateDrive();
+
+    return NULL;
+}
 
 int main()
-{
-	int pin[6] = {15,16,1,4,28,29}; // Pino 15 (verde), 16 (azul), 1 (vermelho), 4 (Controle), 28 (Botão_Paring), 29 (Botão_Reg) na WiringPi
-    int i=0;
+{   
+	init_GPIO();
 
-	wiringPiSetup();
-    while (i<6)
-    {
-        if (i<4)
-        {
-            pinMode(pin[i], OUTPUT);
-        } else 
-        {
-            pinMode(pin[i], INPUT);
-            pullUpDnControl(pin[i], PUD_UP);
-        } 
-        i++;
-    }
-    
+    int placa = SimulationPlateRecognized();
 
-    for (i=0; i<4; i++){
-        printf("Acionando o pino %d...\n", pin[i]);
-        digitalWrite(pin[i], HIGH);
-        printf("Escrevendo no pino %d...\n", pin[i]);
-        sleep(1);
-        printf("Apagando o pino %d...\n", pin[i]);
-        digitalWrite(pin[i], LOW);
-    }
-	
-    for (i=4; i<6; i++)
+    pthread_t LED_thread;
+    pthread_t Gate_thread;
+
+    for (int i = 0; i < 4; i++)
     {   
-        printf("Rotina do Botão (%d)\n", pin[i]);
-        int n=0;
-        while(n<3)
-        {
-            printf("n = %d\n", n);
-            puts("Pressione o botao\n");
-            while(digitalRead(pin[i]));
-            printf("Botao %d pressionado\n", pin[i]);
-            while(digitalRead(pin[i])==0);
-            puts("Botao solto\n");
-            n++;
-        }
+        if (placa == 12345){
+        sleep(0.5);
+        printf("Placa Encontrada: %d\n", placa);
+        pthread_create(&LED_thread, NULL, &LEDThread, NULL);
+        pthread_create(&Gate_thread, NULL, &GateThread, NULL);
+        } else NoVehicleRecognitionLED();
     }
     
-        
+    ButtonRead();
 
 	return 0;
 }

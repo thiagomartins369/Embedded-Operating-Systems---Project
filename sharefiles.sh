@@ -4,7 +4,7 @@
 dir_path=/home/thiago/MEGAsync/FGA-UnB/Materias/UnB_2022-2/Sistemas_Operacionais_Embarcados/Projeto_SOE/Embedded-Operating-Systems---Project/Acionamento_Portao
 
 # Encontrar o endereço IP da Raspberry Pi
-hostname=192.168.15.4
+hostname=192.168.15.5
 
 # Endereço IP do Raspberry Pi
 raspberry_ip=$hostname

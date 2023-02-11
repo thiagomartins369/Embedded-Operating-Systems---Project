@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.8)
+project( Driver_GPIO )
+
+find_package( WiringPi REQUIRED )
+
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+
+SET (SRC
+ Driver_GPIO.c
+)
+
+add_executable( Driver_GPIO ${SRC} )

@@ -1,0 +1,3 @@
+/home/thiago/MEGAsync/FGA-UnB/Materias/UnB_2022-2/Sistemas_Operacionais_Embarcados/Projeto_SOE/Embedded-Operating-Systems---Project/Cadastro_Veiculo/CMakeFiles/rebuild_cache.dir
+/home/thiago/MEGAsync/FGA-UnB/Materias/UnB_2022-2/Sistemas_Operacionais_Embarcados/Projeto_SOE/Embedded-Operating-Systems---Project/Cadastro_Veiculo/CMakeFiles/edit_cache.dir
+/home/thiago/MEGAsync/FGA-UnB/Materias/UnB_2022-2/Sistemas_Operacionais_Embarcados/Projeto_SOE/Embedded-Operating-Systems---Project/Cadastro_Veiculo/CMakeFiles/lerImagem.dir
