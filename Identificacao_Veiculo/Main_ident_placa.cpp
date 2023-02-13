@@ -8,19 +8,52 @@
 #include <iostream>
 #include <cstring>
 
+#include <opencv2/highgui.hpp>
+#include <iostream>
+#include <stdio.h>
+using namespace cv;
+using namespace std;
+
 #include"identificar_placa.h"
 
 int main(void)
 {
 
+    Mat frame;
+    VideoCapture cap;
 
-    cv::Mat imgOriginalScene;                                    // input image
-    imgOriginalScene = cv::imread("imagens/image1.png");         // open image
+    int deviceID = 0;
+    int apiID = cv::CAP_ANY;
+
+    cap.open(deviceID, apiID);
+
+    if (!cap.isOpened())
+    {
+        cerr << "ERROR! Unable to open camera\n";
+        return -1;
+    }
+
+
+    while(1)
+    {
+        // wait for a new frame from camera and store it into 'frame'
+        cap.read(frame);
+        // check if we succeeded
+        if (frame.empty())
+        {
+            cerr << "ERROR! blank frame grabbed\n";
+            break;
+        }
+        // show live and wait for a key with timeout long enough to show images
+        imshow("Live", frame);
+
+    //cv::Mat imgOriginalScene;                                    // input image
+    //imgOriginalScene = cv::imread("imagens/image1.png");         // open image
 
     bool blnKNNTrainingSuccessful = loadKNNDataAndTrainKNN();           // attempt KNN training
 
 
-    std::vector<PossiblePlate> vectorOfPossiblePlates = detectPlatesInScene(imgOriginalScene);          // detect plates
+    std::vector<PossiblePlate> vectorOfPossiblePlates = detectPlatesInScene(frame);          // detect plates
 
     vectorOfPossiblePlates = detectCharsInPlates(vectorOfPossiblePlates);                               // detect chars in plates
 
@@ -40,13 +73,7 @@ int main(void)
 
         char *char_arr;
         char_arr = &licPlate.strChars[0];
-        //int auxt=strlen(char_arr);
-        //int auxt=licPlate.strChars.length()
-        //char placa[auxt];
-        //strcpy(placa,char_arr);
 
-        //std::cout <<placa<< std::endl;
-        //std::cout <<auxt<< std::endl;
         int RP=0;
         RP=ID(char_arr);
         std::cout <<RP<< std::endl;
@@ -54,8 +81,8 @@ int main(void)
         std::cout <<"-----------------------------------------" << std::endl;
 
     }
-
-    cv::waitKey(0);                 // hold windows open until user presses a key
+    }
+    //cv::waitKey(0);                 // hold windows open until user presses a key
 
     return(0);
 }
